@@ -1,5 +1,6 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { Vehicle } from "../../interfaces/vehicle.ts";
+import { Container } from "../../components/layouts/Container.tsx";
 
 interface Data {
     query: string;
@@ -21,7 +22,7 @@ export default function Vehicles({ data }: PageProps<Data>) {
     const { query, vehicles } = data;
 
     return (
-        <>
+        <Container>
             <form className="form">
                 <input name="keyword" value={query} type="text" className="input" />
                 <button className="button" type="submit">🔍</button>
@@ -29,6 +30,6 @@ export default function Vehicles({ data }: PageProps<Data>) {
             <div className="list">
                 {vehicles.map(vehicle => <div className="list-item">{vehicle.name}</div>)}
             </div>
-        </>
+        </Container>
     )
 }

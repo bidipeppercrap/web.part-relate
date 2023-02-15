@@ -1,4 +1,4 @@
-import { Handlers, PageProps } from "https://deno.land/x/fresh@1.1.3/server.ts";
+import { Handlers, PageProps } from "$fresh/server.ts";
 import { Vehicle } from "../../interfaces/vehicle.ts";
 
 interface Data {
